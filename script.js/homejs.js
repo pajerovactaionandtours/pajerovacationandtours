@@ -1,35 +1,20 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.querySelector(".hamburger");
+  const navLinks = document.querySelector(".nav-links");
+  const links = document.querySelectorAll(".nav-links a");
 
-let index = 0;
+  if (!hamburger || !navLinks) return;
 
-const track = document.querySelector(".ts-track");
-const dots = document.querySelectorAll(".ts-dots span");
+  hamburger.addEventListener("click", function () {
+    navLinks.classList.toggle("active");
+  });
 
-function showSlide(i) {
-  track.style.transform = `translateX(-${i * 100}%)`;
-
-  dots.forEach(dot => dot.classList.remove("active"));
-  dots[i].classList.add("active");
-}
-
-// Auto slide every 4 seconds
-setInterval(() => {
-  index++;
-
-  if (index >= dots.length) {
-    index = 0;
-  }
-
-  showSlide(index);
-}, 4000);
-
-// Click on dots
-dots.forEach((dot, i) => {
-  dot.addEventListener("click", () => {
-    index = i;
-    showSlide(index);
+  links.forEach(link => {
+    link.addEventListener("click", function () {
+      navLinks.classList.remove("active");
+    });
   });
 });
-
   /* =================How we work  ================= */
 
 const elements = document.querySelectorAll('.how-text, .how-image');
@@ -323,4 +308,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
     setSlide(card, slideIndex);
   });
+
 });
