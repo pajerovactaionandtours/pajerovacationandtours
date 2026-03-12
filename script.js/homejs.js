@@ -1,4 +1,35 @@
 
+let index = 0;
+
+const track = document.querySelector(".ts-track");
+const dots = document.querySelectorAll(".ts-dots span");
+
+function showSlide(i) {
+  track.style.transform = `translateX(-${i * 100}%)`;
+
+  dots.forEach(dot => dot.classList.remove("active"));
+  dots[i].classList.add("active");
+}
+
+// Auto slide every 4 seconds
+setInterval(() => {
+  index++;
+
+  if (index >= dots.length) {
+    index = 0;
+  }
+
+  showSlide(index);
+}, 4000);
+
+// Click on dots
+dots.forEach((dot, i) => {
+  dot.addEventListener("click", () => {
+    index = i;
+    showSlide(index);
+  });
+});
+
   /* =================How we work  ================= */
 
 const elements = document.querySelectorAll('.how-text, .how-image');
@@ -292,6 +323,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
     setSlide(card, slideIndex);
   });
-
 });
-
