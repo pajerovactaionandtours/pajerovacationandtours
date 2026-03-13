@@ -6,6 +6,23 @@
 
 }
 
+.music-btn{
+  position:fixed;
+  right:20px;
+  top:50%;
+  transform:translateY(-50%);
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  background:#111;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  z-index:9999;
+}
+
 /* Desktop default styles */
 
 .container {
