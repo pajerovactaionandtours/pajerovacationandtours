@@ -3,6 +3,26 @@
    Clean full version
 ========================================================= */
 
+
+const music = document.getElementById("bgmusic");
+
+function startMusic() {
+  music.play().catch(() => {});
+}
+
+document.addEventListener("click", startMusic, { once: true });
+document.addEventListener("scroll", startMusic, { once: true });
+document.addEventListener("touchstart", startMusic, { once: true });
+document.addEventListener("keydown", startMusic, { once: true });
+
+function toggleMusic() {
+  if (music.paused) {
+    music.play();
+  } else {
+    music.pause();
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   /* ================= HERO SLIDER ================= */
   const heroSlides = document.querySelectorAll(".hero-slide");
