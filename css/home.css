@@ -6,21 +6,19 @@
 
 }
 
-.music-btn{
+.music-tab{
   position:fixed;
-  right:20px;
+  right:0;
   top:50%;
   transform:translateY(-50%);
-  width:45px;
-  height:45px;
-  border-radius:50%;
   background:#111;
   color:#fff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  padding:14px 10px;
+  border-radius:12px 0 0 12px;
   cursor:pointer;
   z-index:9999;
+  font-size:20px;
+  box-shadow:0 5px 15px rgba(0,0,0,.3);
 }
 
 /* Desktop default styles */
@@ -40,7 +38,7 @@ body {
     font-family: 'Poppins', sans-serif;
   font-weight: 400;
   line-height: 1;
-  background-color:#10192B;
+  background-color:#000080;
 }
 h1 {
   font-size: 56px;
@@ -54,7 +52,7 @@ h2 {
   
   font-size: 42px;
   font-weight: 600;
-  color:#0000FF;
+  color:#FFA500;
      line-height: 1.5;
 }
 
@@ -139,8 +137,20 @@ a {
 }
 
 /* keep content above slides */
-.navbar,
-.hero-content,
+.navbar{
+  position: relative;
+  z-index: 1000;
+}
+
+
+.hero-content{
+  position: relative;
+  z-index: 1000;
+}
+
+
+
+
 .hero-wave {
   position: relative;
   z-index: 3;
@@ -165,7 +175,7 @@ a {
 
                 /* nAVIGATION BAR CONTAINER */
 .navbar {
-  position: absolute;
+  position: relative;
   top: 0;
   width: 100%;
   padding: 20px 60px;
@@ -357,20 +367,21 @@ Mobile code
 .how-text h2{
   font-size:42px;
   margin-bottom:20px;
+  color: white;
 }
 
 .how-text p{
   font-size:17px;
   line-height:1.7;
   margin-bottom:30px;
-  color:#005A9C;
+  color:#FFA500;
 }
 
 /* BUTTON */
 .how-btn{
   display:inline-block;
   padding:14px 30px;
-  background:#111;
+  background:#FFA500;
   color:#fff;
   text-decoration:none;
   border-radius:6px;
@@ -438,7 +449,7 @@ Mobile code
 /* CARD */
 
 .feature-card{
-  background:transparent;
+  background:#10192B;
   padding:35px 25px;
   border-radius:12px;
   text-align:center;
@@ -463,13 +474,14 @@ Mobile code
 .feature-card h3{
   margin-bottom:10px;
   font-size:20px;
+  color: #FFA500;
 }
 
 /* TEXT */
 
 .feature-card p{
   font-size:15px;
-  color:#005A9C;
+  color:#FFA500;
   line-height:1.6;
 }
 
@@ -513,13 +525,13 @@ Mobile code
 
 .why-head h2 {
   font-size: 42px;
-  color: #4caf50;
+  color: #FFA500;
   margin: 12px 0;
 }
 
 .why-head p {
   font-size: 15px;
-  color: #4caf50;
+  color: #FFA500;
 }
 
 /* GRID */
@@ -547,14 +559,14 @@ Mobile code
 
 .why-card h3 {
   font-size: 18px;
-  color: #f15a24;
+  color: #FFA500;
   margin-bottom: 12px;
 }
 
 .why-card p {
   font-size: 14px;
   line-height: 1.7;
-  color: #4caf50;
+  color: #FFA500;
 }
 
 /* RESPONSIVE */
@@ -592,10 +604,11 @@ Mobile code
 .tours-head h2{
   font-size:42px;
   margin-bottom:10px;
+  color: #FFA500;
 }
 
 .tours-head p{
-  color:#666;
+  color:#FFA500;
   font-size:16px;
 }
 
@@ -719,10 +732,11 @@ Mobile code
 .tour-title{
   font-size:18px;
   margin-bottom:8px;
+  color: #FFA500;
 }
 
 .tour-meta{
-  color:#005A9C;
+  color:#FFA500;
   font-size:14px;
   line-height:1.5;
   margin-bottom:14px;
@@ -737,14 +751,14 @@ Mobile code
 
 .tour-price{
   font-weight:700;
-  color:#0E3386;
+  color:#FFA500;
 }
 
 .tour-btn{
   display:inline-block;
   padding:10px 14px;
   border-radius:10px;
-  background:#0E3386;
+  background:#FFA500;
   color:#fff;
   text-decoration:none;
   transition:transform .2s ease, background .2s ease;
@@ -779,14 +793,15 @@ Mobile code
 
 .ft-head h2 {
   font-size: 42px;
-  color: #0E3386;
+  color: #FFA500;
   margin-bottom: 12px;
 }
 
 .ft-head p {
   font-size: 15px;
-  color: #0E3386;
+  color: #FFA500;
 }
+
 
 /* GRID */
 .ft-grid {
@@ -848,7 +863,7 @@ Mobile code
 
 .ft-info p {
   font-size: 14px;
-  color: #666;
+  color: #062C3F;
   margin-bottom: 20px;
 }
 
@@ -909,6 +924,7 @@ Mobile code
 
 
 
+
 /* =========================
    FEATURED TOURS 2
 ========================= */
@@ -934,13 +950,13 @@ Mobile code
 
 .nt-head h2 {
   font-size: 42px;
-  color: #005A9C;
+  color: #FFA500;
   margin-bottom: 12px;
 }
 
 .nt-head p {
   font-size: 15px;
-  color: #555;
+  color: #FFA500;
 }
 
 /* GRID FOR 3 CARDS */
@@ -972,7 +988,7 @@ Mobile code
 .testimonials {
   background: #f15a24;
   padding: 100px 0;
-  color: #ffffff;
+  color: #10192B;
   text-align: center;
 }
 
@@ -986,6 +1002,7 @@ Mobile code
 .ts-head h2 {
   font-size: 40px;
   margin: 12px 0 50px;
+  color: #10192B;
 }
 
 /* SLIDER */
@@ -1202,7 +1219,7 @@ Mobile code
   text-align: center;
   font-size: 42px;
   margin-bottom: 70px;
-  color: #0b3c5d;
+  color: #FFA515;
 }
 
 /* ROW */
@@ -1296,7 +1313,7 @@ Mobile code
 .partners h3 {
   font-size: 28px;
   margin-bottom: 40px;
-  color: #005A9C;
+  color: #FFA500;
 }
 
 .partners-slider {
@@ -1482,7 +1499,7 @@ Mobile code
 
 .about-text p {
   font-size: 15px;
-  color: #555;
+  color: #FFA501;
   line-height: 1.8;
   margin-bottom: 18px;
 }
@@ -1493,7 +1510,7 @@ Mobile code
   margin-top: 10px;
   padding: 12px 32px;
   border-radius: 30px;
-  background: #062c3f;
+  background: #FFA501;
   color: #ffffff;
   text-decoration: none;
   font-size: 14px;
