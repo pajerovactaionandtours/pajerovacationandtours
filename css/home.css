@@ -527,12 +527,12 @@ Mobile code
   font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #ffb703;
+  color: #000080;
 }
 
 .why-head h2 {
   font-size: 42px;
-  color: #FFA500;
+  color: #000080;
   margin: 12px 0;
 }
 
@@ -566,7 +566,7 @@ Mobile code
 
 .why-card h3 {
   font-size: 18px;
-  color: #FFA500;
+  color: #000080;
   margin-bottom: 12px;
 }
 
