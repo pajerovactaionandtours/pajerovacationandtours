@@ -2,26 +2,53 @@
    HOME / GLOBAL JS
    Clean full version
 ========================================================= */
-
+  /* ================= Music ================= */
 
 const music = document.getElementById("bgmusic");
+const tab = document.getElementById("musicTab");
 
-function startMusic() {
-  music.play().catch(() => {});
+function playMusic() {
+  music.play().then(() => {
+    localStorage.setItem("musicAllowed", "yes");
+    tab.textContent = "❚❚";
+  }).catch(() => {
+    tab.textContent = "♫";
+  });
 }
 
-document.addEventListener("click", startMusic, { once: true });
-document.addEventListener("scroll", startMusic, { once: true });
-document.addEventListener("touchstart", startMusic, { once: true });
-document.addEventListener("keydown", startMusic, { once: true });
+function pauseMusic() {
+  music.pause();
+  tab.textContent = "♫";
+}
 
 function toggleMusic() {
   if (music.paused) {
-    music.play();
+    playMusic();
   } else {
-    music.pause();
+    pauseMusic();
   }
 }
+
+tab.addEventListener("click", toggleMusic);
+
+// Try immediately for returning users
+if (localStorage.getItem("musicAllowed") === "yes") {
+  playMusic();
+}
+
+// Fallback: first interaction anywhere
+["click", "touchstart", "scroll", "keydown"].forEach(event => {
+  document.addEventListener(event, function startOnce() {
+    if (music.paused) playMusic();
+    document.removeEventListener(event, startOnce);
+  }, { once: true });
+});
+
+
+
+
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
   /* ================= HERO SLIDER ================= */
