@@ -260,9 +260,18 @@ a {
 .why-us {
   position: relative;
   overflow: hidden;
-    max-width: 1200px;
+ 
   margin: auto;
+
+    position: relative;
+  z-index: 2;
+
+    width:100%;
+  padding:120px 0;
   background:white;
+
+
+  
 }
 
 /* Shared background image style */
@@ -508,10 +517,6 @@ Mobile code
 /* =========================
    WHY US
 ========================= */
-.why-us {
-  padding: 120px 0;
-  background: transparent;
-}
 
 .why-head {
   text-align: center;
