@@ -2,7 +2,6 @@
    HOME / GLOBAL JS
    Clean full version
 ========================================================= */
-  /* ================= Music ================= */
 
 const music = document.getElementById("bgmusic");
 const tab = document.getElementById("musicTab");
@@ -43,12 +42,6 @@ if (localStorage.getItem("musicAllowed") === "yes") {
     document.removeEventListener(event, startOnce);
   }, { once: true });
 });
-
-
-
-
-
-
 
 document.addEventListener("DOMContentLoaded", function () {
   /* ================= HERO SLIDER ================= */
@@ -188,108 +181,108 @@ document.addEventListener("DOMContentLoaded", function () {
   /* ================= ALL TOURS ================= */
   const tours = [
     {
-      title: "Dunn’s River Falls Adventure",
-      meta: "Waterfalls • Family friendly • 4-6 hours",
-      price: "From $79",
+      title: "Dunn's River Falls & Park and Blue Hole Island Gully Combo",
+      meta: "Dunn's River Falls & Park and Blue Hole Island Gully  Combo • 4-6 hours",
+      price: "From $",
       link: "contact.html",
       images: [
-        "images/tours/tour1-1.jpg",
-        "images/tours/tour1-2.jpg",
-        "images/tours/tour1-3.jpg"
+        "image tours\BAMBOO-RAFTING.jpg",
+        "image tours/greengrotto1.png",
+        "image tours\Bobmarley.jpgimages/tours/tour1-3.jpg"
       ]
     },
     {
-      title: "Blue Hole & Secret Falls",
-      meta: "Nature • Swim spots • Half-day",
-      price: "From $89",
+      title: "All In One Full Day Tour in Saint Ann Garden Parish Jamaica",
+      meta: "All In One Full Day Tour in Saint Ann Garden Parish Jamaica • 4-6 hours",
+      price: "From $147",
       link: "contact.html",
       images: [
-        "images/tours/tour2-1.jpg",
-        "images/tours/tour2-2.jpg",
-        "images/tours/tour2-3.jpg"
+        "image tours\BAMBOO-RAFTING.jpg",
+        "image tours/greengrotto1.png",
+        "image tours\Bobmarley.jpgimages/tours/tour1-3.jpg"
       ]
     },
     {
-      title: "Negril Beach Day Trip",
-      meta: "Beach • Sunset • Chill day",
-      price: "From $69",
+      title: "Blue Hole Island Gully and Glistening Water Lagoons night Tour",
+      meta: "Blue Hole Island Gully and Glistening Water Lagoons  night Tour • Chill day",
+      price: "From $135",
       link: "contact.html",
       images: [
-        "images/tours/tour3-1.jpg",
-        "images/tours/tour3-2.jpg",
-        "images/tours/tour3-3.jpg"
+        "image tours\BAMBOO-RAFTING.jpg",
+        "image tours/greengrotto1.png",
+        "image tours\Bobmarley.jpgimages/tours/tour1-3.jpg"
       ]
     },
     {
-      title: "Bob Marley Museum Experience",
-      meta: "Culture • Guided tour • 2-4 hours",
-      price: "From $59",
+      title: "Blue Hole Secret Falls and Ocho Rios Highlight View Scenic Fern Gully",
+      meta: "Culture • Guided tour • 4.30 hours",
+      price: "From $132",
       link: "contact.html",
       images: [
-        "images/tours/tour4-1.jpg",
-        "images/tours/tour4-2.jpg",
-        "images/tours/tour4-3.jpg"
+          "imagetours\green-grotto.jpg",
+        "imagetours\green-grotto.jpg",
+        "imagetours\green-grotto.jpg.jpg"
       ]
     },
     {
-      title: "ATV Jungle Ride",
-      meta: "Adventure • Off-road • 2-3 hours",
-      price: "From $99",
+      title: "Bob Marley Birth Place and Resting Place 9 Miles Jamaica",
+      meta: "Bob Marley Birth Place and Resting Place 9 Miles Jamaica • 2-3 hours",
+      price: "From $132",
       link: "contact.html",
       images: [
-        "images/tours/tour5-1.jpg",
-        "images/tours/tour5-2.jpg",
-        "images/tours/tour5-3.jpg"
+       "image tours\BAMBOO-RAFTING.jpg",
+        "image tours/greengrotto1.png",
+        "image tours\Bobmarley.jpgimages/tours/tour1-3.jpg"
       ]
     },
     {
-      title: "River Rafting (Bamboo Raft)",
-      meta: "Relax • Scenic river • 2-3 hours",
-      price: "From $85",
+      title: "Dunn's River Falls and Ocho Rios Highlight View Scenic Fern Gully",
+      meta: "Dunn's River Falls and Ocho Rios Highlight Scenic Fern Gully• 4 hours",
+      price: "From $132",
       link: "contact.html",
       images: [
-        "images/tours/tour6-1.jpg",
-        "images/tours/tour6-2.jpg",
-        "images/tours/tour6-3.jpg"
+          "image tours\BAMBOO-RAFTING.jpg",
+        "image tours/greengrotto1.png",
+        "image tours\Bobmarley.jpgimages/tours/tour1-3.jpg"
       ]
     },
     {
-      title: "Kingston City Highlights",
-      meta: "City • Food stops • Half-day",
-      price: "From $75",
+      title: "Green Grotto Caves and Dunn's River Falls and Park Combo",
+      meta: "Green Grotto Caves and  Dunn's River Falls & Park Combo",
+      price: "From $132",
       link: "contact.html",
       images: [
-        "images/tours/tour7-1.jpg",
-        "images/tours/tour7-2.jpg",
-        "images/tours/tour7-3.jpg"
+        "image tours\BAMBOO-RAFTING.jpg",
+        "image tours/greengrotto1.png",
+        "image tours\Bobmarley.jpgimages/tours/tour1-3.jpg"
       ]
     },
     {
-      title: "Luminous Lagoon Night Tour",
-      meta: "Night • Glow water • 2-3 hours",
-      price: "From $65",
+      title: "Green Grotto Caves and Blue Hole Island Gully Falls",
+      meta: "Green Grotto Caves and Blue Hole Island Gully Falls • 5 hours",
+      price: "From $132",
       link: "contact.html",
       images: [
-        "images/tours/tour8-1.jpg",
-        "images/tours/tour8-2.jpg",
-        "images/tours/tour8-3.jpg"
+     "image tours\BAMBOO-RAFTING.jpg",
+        "image tours/greengrotto1.png",
+        "image tours\Bobmarley.jpgimages/tours/tour1-3.jpg"
       ]
     },
     {
-      title: "Rose Hall Great House",
-      meta: "History • Sunset option • 2-3 hours",
-      price: "From $55",
+      title: "Green Grotto Caves and White River Calypso Tubing Combo",
+      meta: "Green Grotto Caves and White River Calypso Tubing Combo • 5 hours",
+      price: "From $137",
       link: "contact.html",
       images: [
-        "images/tours/tour9-1.jpg",
-        "images/tours/tour9-2.jpg",
-        "images/tours/tour9-3.jpg"
+         "image tours\BAMBOO-RAFTING.jpg",
+        "image tours/greengrotto1.png",
+        "image tours\Bobmarley.jpgimages/tours/tour1-3.jpg"
       ]
     },
     {
-      title: "Catamaran Cruise (Snorkel + Drinks)",
-      meta: "Cruise • Snorkeling • Party vibe",
-      price: "From $109",
+      title: "White River Tubing and Ocho Rios Highlight View Scenic Fern Gully",
+      meta: "White River Tubing and Ocho Rios Highlight View Scenic Fern Gully • 4 Hours",
+      price: "From $132",
       link: "contact.html",
       images: [
         "images/tours/tour10-1.jpg",
