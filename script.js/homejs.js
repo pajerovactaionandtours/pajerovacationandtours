@@ -147,9 +147,9 @@ document.addEventListener("DOMContentLoaded", function () {
       price: "From $",
       link: "contact.html",
       images: [
-        "image tours\BAMBOO-RAFTING.jpg",
-        "image tours/greengrotto1.png",
-        "image tours\Bobmarley.jpgimages/tours/tour1-3.jpg"
+        "All In One Full Day Tour in Saint Ann Garden Parish Jamaica/dunnrivergallery1.jpg",
+        "All In One Full Day Tour in Saint Ann Garden Parish Jamaica/Pvt # 11023 Bob Marley.jpgg",
+        "All In One Full Day Tour in Saint Ann Garden Parish Jamaica/PVT my COACH # 12.jpg"
       ]
     },
     {
@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", function () {
       price: "From $147",
       link: "contact.html",
       images: [
-        "image tours\BAMBOO-RAFTING.jpg",
+        "Blue Hole Island Gully and Glistening Water Lagoons night Tour/luminous laggon Jamaica.jpg",
         "image tours/greengrotto1.png",
         "image tours\Bobmarley.jpgimages/tours/tour1-3.jpg"
       ]
@@ -191,7 +191,7 @@ document.addEventListener("DOMContentLoaded", function () {
       price: "From $132",
       link: "contact.html",
       images: [
-       "image tours\BAMBOO-RAFTING.jpg",
+       "Bob Marley Birth Place and Resting Place 9 Miles Jamaica/biob marley 9 miles real .jpeg",
         "image tours/greengrotto1.png",
         "image tours\Bobmarley.jpgimages/tours/tour1-3.jpg"
       ]
