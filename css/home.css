@@ -260,6 +260,15 @@ a {
   
 }
 
+.hero-logo{
+
+  max-width: 650px;;
+ 
+
+  display: block;
+}
+
+
 /* Shared background image style */
 .why-bg-image {
   position: absolute;
