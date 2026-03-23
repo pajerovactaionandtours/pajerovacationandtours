@@ -3,6 +3,106 @@
    Clean full version
 ========================================================= */
 
+  /* ================= MOBILE NAV ================= */
+  const hamburger = document.querySelector(".hamburger");
+  const navLinks = document.querySelector(".nav-links");
+  const navItems = document.querySelectorAll(".nav-links a");
+
+  if (hamburger && navLinks) {
+    hamburger.addEventListener("click", function () {
+      navLinks.classList.toggle("active");
+    });
+
+    navItems.forEach(link => {
+      link.addEventListener("click", function () {
+        navLinks.classList.remove("active");
+      });
+    });
+  }
+
+/* ================= Music ================= */
+
+
+
+
+const music = document.getElementById("bgmusic");
+const tab = document.getElementById("musicTab");
+
+function playMusic() {
+  music.play().then(() => {
+    localStorage.setItem("musicAllowed", "yes");
+    tab.textContent = "❚❚";
+  }).catch(() => {
+    tab.textContent = "♫";
+  });
+}
+
+function pauseMusic() {
+  music.pause();
+  tab.textContent = "♫";
+}
+
+function toggleMusic() {
+  if (music.paused) {
+    playMusic();
+  } else {
+    pauseMusic();
+  }
+}
+
+tab.addEventListener("click", toggleMusic);
+
+// Try immediately for returning users
+if (localStorage.getItem("musicAllowed") === "yes") {
+  playMusic();
+}
+
+// Fallback: first interaction anywhere
+["click", "touchstart", "scroll", "keydown"].forEach(event => {
+  document.addEventListener(event, function startOnce() {
+    if (music.paused) playMusic();
+    document.removeEventListener(event, startOnce);
+  }, { once: true });
+});
+
+
+
+  /* ================= STEP ANIMATION ================= */
+  const steps = document.querySelectorAll(".hiw-step");
+
+  if (steps.length) {
+    function revealSteps() {
+      steps.forEach(step => {
+        const top = step.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+          step.classList.add("show");
+        }
+      });
+    }
+
+    window.addEventListener("scroll", revealSteps);
+    revealSteps();
+  }
+
+  /* ================= HOW IT WORKS IMAGE SLIDER ================= */
+  const hiwTrack = document.querySelector(".hiw-track");
+  const hiwSlides = document.querySelectorAll(".hiw-track img");
+
+  if (hiwTrack && hiwSlides.length) {
+    let hiwIndex = 0;
+    const totalHiwSlides = hiwSlides.length;
+
+    function moveHiwSlider() {
+      hiwIndex = (hiwIndex + 1) % totalHiwSlides;
+      hiwTrack.style.transform = `translateX(-${hiwIndex * 100}%)`;
+    }
+
+    setInterval(moveHiwSlider, 4000);
+  }
+
+
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
   /* ================= HERO SLIDER ================= */
@@ -18,6 +118,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 4000);
   }
 
+
+
+
+  
   /* ================= TESTIMONIAL SLIDER ================= */
   const tsTrack = document.querySelector(".ts-track");
   const tsDots = document.querySelectorAll(".ts-dots span");
@@ -92,22 +196,6 @@ document.addEventListener("DOMContentLoaded", function () {
     setInterval(moveHiwSlider, 4000);
   }
 
-  /* ================= MOBILE NAV ================= */
-  const hamburger = document.querySelector(".hamburger");
-  const navLinks = document.querySelector(".nav-links");
-  const navItems = document.querySelectorAll(".nav-links a");
-
-  if (hamburger && navLinks) {
-    hamburger.addEventListener("click", function () {
-      navLinks.classList.toggle("active");
-    });
-
-    navItems.forEach(link => {
-      link.addEventListener("click", function () {
-        navLinks.classList.remove("active");
-      });
-    });
-  }
 
   /* ================= REVIEW SLIDER ================= */
   const reviewTrack = document.querySelector(".reviews-track");
@@ -147,9 +235,9 @@ document.addEventListener("DOMContentLoaded", function () {
       price: "From $",
       link: "contact.html",
       images: [
-        "All In One Full Day Tour in Saint Ann Garden Parish Jamaica/dunnrivergallery1.jpg",
-        "All In One Full Day Tour in Saint Ann Garden Parish Jamaica/Pvt # 11023 Bob Marley.jpgg",
-        "All In One Full Day Tour in Saint Ann Garden Parish Jamaica/PVT my COACH # 12.jpg"
+        "image tours\BAMBOO-RAFTING.jpg",
+        "image tours/greengrotto1.png",
+        "image tours\Bobmarley.jpgimages/tours/tour1-3.jpg"
       ]
     },
     {
@@ -158,7 +246,7 @@ document.addEventListener("DOMContentLoaded", function () {
       price: "From $147",
       link: "contact.html",
       images: [
-        "Blue Hole Island Gully and Glistening Water Lagoons night Tour/luminous laggon Jamaica.jpg",
+        "image tours\BAMBOO-RAFTING.jpg",
         "image tours/greengrotto1.png",
         "image tours\Bobmarley.jpgimages/tours/tour1-3.jpg"
       ]
@@ -191,7 +279,7 @@ document.addEventListener("DOMContentLoaded", function () {
       price: "From $132",
       link: "contact.html",
       images: [
-       "Bob Marley Birth Place and Resting Place 9 Miles Jamaica/biob marley 9 miles real .jpeg",
+       "image tours\BAMBOO-RAFTING.jpg",
         "image tours/greengrotto1.png",
         "image tours\Bobmarley.jpgimages/tours/tour1-3.jpg"
       ]
@@ -347,4 +435,39 @@ document.addEventListener("DOMContentLoaded", function () {
       setTourSlide(card, slideIndex);
     });
   }
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const track = document.querySelector(".slider-track");
+  const slides = document.querySelectorAll(".slide");
+  const next = document.querySelector(".next");
+  const prev = document.querySelector(".prev");
+
+  if (!track || !slides.length || !next || !prev) return;
+
+  let index = 0;
+  const total = slides.length;
+
+  function updateSlider(){
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  next.addEventListener("click", () => {
+    index = (index + 1) % total;
+    updateSlider();
+  });
+
+  prev.addEventListener("click", () => {
+    index = (index - 1 + total) % total;
+    updateSlider();
+  });
+
+  // AUTO SLIDE
+  setInterval(() => {
+    index = (index + 1) % total;
+    updateSlider();
+  }, 4000);
+
 });
