@@ -148,21 +148,24 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  /* ================= HOW WE WORK ANIMATION ================= */
+  /* ================= aBOUT uS ================= */
+ document.addEventListener("DOMContentLoaded", () => {
   const elements = document.querySelectorAll(".how-text, .how-image");
 
-  if (elements.length) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-        }
-      });
-    }, { threshold: 0.3 });
+  if (!elements.length) return;
 
-    elements.forEach(el => observer.observe(el));
-  }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  }, { threshold: 0.2 });
 
+  elements.forEach((el) => observer.observe(el));
+});
+
+      
   /* ================= STEP ANIMATION ================= */
   const steps = document.querySelectorAll(".hiw-step");
 
