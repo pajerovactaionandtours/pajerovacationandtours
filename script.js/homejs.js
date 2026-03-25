@@ -102,11 +102,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   /* ================= aBOUT uS ================= */
- document.addEventListener("DOMContentLoaded", () => {
-  const elements = document.querySelectorAll(".how-text, .how-image");
+const elements = document.querySelectorAll(".how-text, .how-image");
 
-  if (!elements.length) return;
-
+if (elements.length) {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -116,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }, { threshold: 0.2 });
 
   elements.forEach((el) => observer.observe(el));
-});
+}
 
       
   /* ================= STEP ANIMATION ================= */
