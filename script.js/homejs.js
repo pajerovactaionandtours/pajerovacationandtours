@@ -230,6 +230,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 6000);
   }
 
+
   /* ================= ALL TOURS ================= */
   const tours = [
     {
