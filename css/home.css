@@ -301,12 +301,18 @@ Mobile code
 
 
 .hero-content h1 {
-  font-size: 56px;
-  margin-bottom: 15px;
+  font-size: 26px;
+  margin-bottom: 5px;
+}
+
+
+.hero-content h2 {
+  font-size: 23px;
+  margin-bottom: 5px;
 }
 
 .hero-content p {
-  font-size: 18px;
+  font-size: 10px;
   max-width: 600px;
   margin-bottom: 30px;
   opacity: 0.9;
@@ -324,6 +330,14 @@ Mobile code
 
 
 @media (max-width: 768px){
+
+ .hero-content h1 {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+ 
+ 
 .cta{
 
  padding: 5px 20px;
