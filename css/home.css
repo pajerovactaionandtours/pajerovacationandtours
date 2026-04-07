@@ -293,18 +293,18 @@ Mobile code
 
 
 .hero-content h1 {
-  font-size: 26px;
+  font-size: 56px;
   margin-bottom: 5px;
 }
 
 
 .hero-content h2 {
-  font-size: 23px;
+  font-size: 52px;
   margin-bottom: 5px;
 }
 
 .hero-content p {
-  font-size: 10px;
+  font-size: 18px;
   max-width: 600px;
   margin-bottom: 30px;
   opacity: 0.9;
