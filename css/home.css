@@ -241,6 +241,7 @@ Mobile code
   border-radius:12px;
   object-fit:cover;
   display: block;
+  margin-left: 500px;
 
   
 }
@@ -356,6 +357,7 @@ Mobile code
   border-radius:12px;
   object-fit:cover;
   display: block;
+ margin-left: 0px;
 }
 
 }
