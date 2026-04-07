@@ -244,10 +244,13 @@ Mobile code
 
 .hero-logo{
 
-  max-width: 650px;;
- 
-
+  
+    width:20%;
+  border-radius:12px;
+  object-fit:cover;
   display: block;
+
+  
 }
 
 
