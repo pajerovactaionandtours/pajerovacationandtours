@@ -322,6 +322,30 @@ Mobile code
   margin-bottom: 60px;
 }
 
+
+@media (max-width: 768px){
+.cta{
+
+ padding: 5px 20px;
+  background: #ffb703;
+  color: #000;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 300;
+  margin-bottom: 60px;
+  
+}
+
+.hero-logo{
+
+    width:60%;
+  border-radius:12px;
+  object-fit:cover;
+  display: block;
+}
+
+}
+
 /* =========================
    Why Us 
 ========================= */
