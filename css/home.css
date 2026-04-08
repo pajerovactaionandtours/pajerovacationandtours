@@ -1576,12 +1576,11 @@ Review Section
 
 /* Important Notice*/
 
-
-.image-strip{
+.bg-overlay-section{
   width:100%;
-  height:380px;
+  height:900px;
 
-  background:url("newimagetour/nagtabon-beach-palawan PVT #0099.jpg") center/cover no-repeat;
+ 
 
   display:flex;
   justify-content:center;
@@ -1593,41 +1592,29 @@ Review Section
 }
 
 /* DARK OVERLAY */
-.image-strip::before{
+.bg-overlay-section::before{
   content:"";
   position:absolute;
   inset:0;
-  background:rgba(0,0,0,0.45);
+  background:rgba(0,0,0,0.5);
 }
 
 /* CONTENT */
-.strip-content{
+.bg-content{
   position:relative;
   z-index:2;
-  max-width:700px;
   padding:0 20px;
 }
 
-.strip-content h1{
+.bg-content h1{
   font-size:44px;
   margin-bottom:10px;
 }
 
-.strip-content p{
+.bg-content p{
   font-size:16px;
   opacity:0.9;
 }
-
-.image-strip{
-  background-size:cover;
-  animation:zoomBg 20s ease infinite alternate;
-}
-
-@keyframes zoomBg{
-  from{background-size:100%;}
-  to{background-size:110%;}
-}
-
 
 /* =========================
    ABOUT US (SIMPLE)
