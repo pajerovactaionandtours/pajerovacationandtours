@@ -364,65 +364,105 @@ Mobile code
 
 }
 
+
+
 /* =========================
-   Why Us 
+   SPLIT SECTION
 ========================= */
 
+.split-section {
+  width: 100%;
+  min-height: 400px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr; /* center bigger */
+  align-items: center;
+  gap: 20px;
+  padding: 60px 5%;
+  background: #fff;
+}
 
-.why-us {
-  position: relative;
-  overflow: hidden;
-    max-width: 100%;
+/* IMAGES */
+.split-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.split-img img {
+  max-width: 180px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* LEFT IMAGE ALIGN */
+.split-img.left {
+  max-width: 200px;
+  justify-content: flex-end;
+}
+
+/* RIGHT IMAGE ALIGN */
+.split-img.right {
+  max-width: 180px;
+  justify-content: flex-start;
+}
+
+/* CONTENT */
+.split-content {
+  text-align: center;
+  max-width: 700px;
   margin: auto;
 }
 
-
-
-/* Shared background image style */
-.why-bg-image {
-  position: absolute;
-  bottom: 0;
-  z-index: 0;
-  pointer-events: none;
+.split-content h2 {
+  font-size: 36px;
+  color: #0a1f44;
+  margin-bottom: 15px;
+  line-height: 1.3;
 }
 
-.why-bg-image img {
-             /* subtle watermark */
-  filter: grayscale(10%);
+.split-content p {
+  font-size: 16px;
+  color: #ff8c00;
+  line-height: 1.6;
 }
 
-/* Marcus Garvey - LEFT */
-.why-bg-image.garvey {
-  left: -80px;                /* push partly outside */
-}
-
-.why-bg-image.garvey img {
-  width: 300px;
-}
-
-/* Bob Marley - RIGHT */
-.why-bg-image.marley {
-  right: -80px;
-}
-
-.why-bg-image.marley img {
-  width: 280px;
-}
-
-/* Keep actual content above */
-.why-us > * {
-  position: relative;
-  z-index: 2;
-}
-
-
+/* =========================
+   MOBILE VIEW
+========================= */
 @media (max-width: 768px) {
-  .why-bg-image {
-    display: none;
+
+  .split-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* center EVERYTHING */
+    text-align: center;
+    gap: 25px;
+    padding: 40px 20px;
   }
+
+  /* IMAGE CONTAINER */
+  .split-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;   /* center image */
+  }
+
+  /* IMAGE */
+  .split-img img {
+    max-width: 150px;
+    width: auto;
+    height: auto;
+    display: block;
+  }
+
+  /* CONTENT */
+  .split-content {
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
 }
-
-
 
 
 /* =========================
