@@ -80,46 +80,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-const music = document.getElementById("bgmusic");
-const tab = document.getElementById("musicTab");
-
-function playMusic() {
-  music.play().then(() => {
-    localStorage.setItem("musicAllowed", "yes");
-    tab.textContent = "❚❚";
-  }).catch(() => {
-    tab.textContent = "♫";
-  });
-}
-
-function pauseMusic() {
-  music.pause();
-  tab.textContent = "♫";
-}
-
-function toggleMusic() {
-  if (music.paused) {
-    playMusic();
-  } else {
-    pauseMusic();
-  }
-}
-
-tab.addEventListener("click", toggleMusic);
-
-// Try immediately for returning users
-if (localStorage.getItem("musicAllowed") === "yes") {
-  playMusic();
-}
-
-// Fallback: first interaction anywhere
-["click", "touchstart", "scroll", "keydown"].forEach(event => {
-  document.addEventListener(event, function startOnce() {
-    if (music.paused) playMusic();
-    document.removeEventListener(event, startOnce);
-  }, { once: true });
-});
-
 
   
   /* ================= TESTIMONIAL SLIDER ================= */
