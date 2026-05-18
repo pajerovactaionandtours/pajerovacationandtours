@@ -433,3 +433,24 @@ document.addEventListener("DOMContentLoaded", () => {
   }, 4000);
 
 });
+
+
+
+const music = document.getElementById("bg-music");
+const musicBtn = document.getElementById("music-btn");
+
+let isPlaying = false;
+
+musicBtn.addEventListener("click", () => {
+
+  if (!isPlaying) {
+    music.play();
+    musicBtn.innerHTML = "⏸ Pause Music";
+    isPlaying = true;
+  } else {
+    music.pause();
+    musicBtn.innerHTML = "🎵 Play Music";
+    isPlaying = false;
+  }
+
+});
