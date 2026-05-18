@@ -454,3 +454,25 @@ musicBtn.addEventListener("click", () => {
   }
 
 });
+
+
+/* ================= DROPDOWN MOBILE ================= */
+
+const dropToggle = document.querySelector(".drop-toggle");
+
+if (dropToggle) {
+
+  dropToggle.addEventListener("click", function(e) {
+
+    if (window.innerWidth <= 768) {
+
+      e.preventDefault();
+
+      this.parentElement.classList.toggle("active");
+
+    }
+
+  });
+
+}
+
