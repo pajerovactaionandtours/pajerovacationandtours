@@ -88,6 +88,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+ z-index:9999;
  
 }
     /* lOGO  */
@@ -107,6 +108,7 @@ a {
   text-decoration: none;
   color: #f15a24;
   font-weight: 500;
+ display: flex;
 }
 
 .nav-links a:hover {
@@ -130,12 +132,69 @@ a {
   font-weight: 600;
 }
 
+
+/* =========================
+   DROPDOWN MENU
+========================= */
+
+.dropdown {
+  position: relative;
+}
+
+/* HIDE DROPDOWN BY DEFAULT */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  min-width: 180px;
+  background: rgba(0,0,0,0.95);
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  border-radius: 10px;
+  overflow: hidden;
+
+  display: none;
+  flex-direction: column;
+
+  z-index: 9999;
+}
+
+/* DROPDOWN LINKS */
+.dropdown-menu li a {
+  display: block;
+  padding: 12px 18px;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+/* HOVER */
+.dropdown-menu li a:hover {
+  background: #f15a24;
+  color: #fff;
+}
+
+/* DESKTOP HOVER */
+@media (min-width: 769px) {
+
+  .dropdown:hover .dropdown-menu {
+    display: flex;
+  }
+
+}
+
 /* =========================
 Mobile code
 ========================= */
 
 
 /* Hide hamburger on desktop */
+
+
 .hamburger {
   display: none;
   font-size: 28px;
@@ -151,6 +210,21 @@ Mobile code
      position: relative;
     z-index: 10002;
   }
+ 
+
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 20px 60px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  z-index: 9999;
+}
+
 
   .nav-links {
     position: absolute;
