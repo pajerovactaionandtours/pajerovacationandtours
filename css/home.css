@@ -2137,6 +2137,19 @@ html {
 }
 
 
+/* Music*/
 
-
+#music-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ffb703;
+  color: #000;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 9999;
+}
 
