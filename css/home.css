@@ -253,7 +253,7 @@ Mobile code
 
 .hero {
   position: relative;
-  height: 1000vh;
+  height: 250vh;
   overflow: hidden;
   color: white;
 }
@@ -282,8 +282,8 @@ Mobile code
 
 /* dark overlay */
 .hero::before {
-  content: "";
-  position: absolute;
+  content:"";
+  position:absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.45);
   z-index: 2;
@@ -291,8 +291,8 @@ Mobile code
 
 /* keep content above slides */
 .navbar{
-  position: relative;
-  z-index: 9999;
+  position:relative;
+  z-index:9999;
 }
 
 .hero-logo{
@@ -323,7 +323,7 @@ Mobile code
 /* WAVE */
 .hero-wave {
   position: absolute;
-  bottom: -1px; /* removes white gap */
+  bottom:-1px; /* removes white gap */
   left: 0;
   width: 100%;
   line-height: 0;
