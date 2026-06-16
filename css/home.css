@@ -32,8 +32,8 @@ body {
   
 }
 h1 {
-  font-size: 56px;
-  font-weight: 700;
+  font-size: 36px;
+  font-weight: 600;
   color:#ffffff;
   line-height: 1.0;
    
@@ -41,8 +41,8 @@ h1 {
 
 h2 {
   
-  font-size: 42px;
-  font-weight: 600;
+  font-size: 22px;
+  font-weight: 500;
   color:#ffffff;
      line-height: 1.5;
 }
