@@ -188,6 +188,20 @@ if (elements.length) {
     }, 6000);
   }
 
+   
+   /* ================= chnages 1 ================= */
+ 
+
+   document.addEventListener("DOMContentLoaded", () => {
+
+  const heroContent = document.querySelector(".hero-content");
+
+  if(heroContent){
+    heroContent.classList.add("show");
+  }
+
+});
+
 
   /* ================= ALL TOURS ================= */
   const tours = [
