@@ -189,18 +189,6 @@ if (elements.length) {
   }
 
    
-   /* ================= chnages 1 ================= */
- 
-
-   document.addEventListener("DOMContentLoaded", () => {
-
-  const heroContent = document.querySelector(".hero-content");
-
-  if(heroContent){
-    heroContent.classList.add("show");
-  }
-
-});
 
 
   /* ================= ALL TOURS ================= */
