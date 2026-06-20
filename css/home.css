@@ -317,46 +317,6 @@ Mobile code
 }
 
 
-/* HERO CONTENT ANIMATION */
-
-.hero-content h1,
-.hero-content h2,
-.hero-content p,
-.hero-content .hero-logo,
-.hero-content .cta{
-  opacity:0;
-  transform:translateY(40px);
-}
-
-/* H1 */
-.hero-content.show h1{
-  animation:fadeUp 1s ease forwards;
-}
-
-/* H2 */
-.hero-content.show h2{
-  animation:fadeUp 1s ease forwards;
-  animation-delay:.3s;
-}
-
-/* P */
-.hero-content.show p{
-  animation:fadeUp 1s ease forwards;
-  animation-delay:.6s;
-}
-
-/* LOGO */
-.hero-content.show .hero-logo{
-  animation:fadeUp 1s ease forwards;
-  animation-delay:.9s;
-}
-
-/* BUTTON */
-.hero-content.show .cta{
-  animation:fadeUp 1s ease forwards;
-  animation-delay:1.2s;
-}
-
 
   /* WAVE DESIGN  */
 
