@@ -1334,7 +1334,7 @@ font-size:14px;
 }
 
 .hero-content h1{
-font-size:56px;
+font-size:36px;
 margin:15px 0;
 }
 
@@ -1400,7 +1400,7 @@ margin-bottom:10px;
 @media(max-width:768px){
 
 .hero-content h1{
-font-size:38px;
+font-size:18px;
 }
 
 .benefits-grid{
@@ -1490,7 +1490,7 @@ padding:15px;
 }
 
 .hero-content h1{
-    font-size:56px;
+    font-size:46px;
     line-height:1.2;
     margin-bottom:20px;
 }
@@ -1543,7 +1543,7 @@ padding:15px;
     }
 
     .hero-content h1{
-        font-size:32px;
+        font-size:22px;
         line-height:1.2;
     }
 
