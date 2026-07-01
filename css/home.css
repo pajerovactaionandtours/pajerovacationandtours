@@ -459,6 +459,7 @@ Mobile code
 .split-img.left {
   max-width: 200px;
   justify-content: flex-end;
+ margin-left:20px ;
 }
 
 /* RIGHT IMAGE ALIGN */
