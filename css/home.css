@@ -466,6 +466,7 @@ Mobile code
 .split-img.right {
   max-width: 180px;
   justify-content: flex-start;
+  margin-left:40px ;
 }
 
 /* CONTENT */
